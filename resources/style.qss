@@ -1,0 +1,235 @@
+/* ============================================
+   历史粘贴板 — 淡粉色主题样式表
+   设计规范版本: v1.0
+   ============================================ */
+
+/* ---- 全局 ---- */
+QWidget {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    font-size: 13px;
+    color: #4A4A4A;
+}
+
+/* ---- 主窗口 ---- */
+QWidget#mainWindow {
+    background-color: #FFFAFB;
+}
+
+/* ---- 搜索栏 ---- */
+QWidget#searchBar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #F5E6E8;
+    padding: 8px 12px;
+}
+
+QLineEdit#searchInput {
+    background-color: #FFF0F3;
+    border: 1px solid #FFD4DC;
+    border-radius: 18px;
+    padding: 8px 16px;
+    font-size: 13px;
+    color: #4A4A4A;
+}
+
+QLineEdit#searchInput:focus {
+    border: 1px solid #FFB6C1;
+    background-color: #FFFFFF;
+}
+
+QLineEdit#searchInput::placeholder {
+    color: #C4A0A8;
+}
+
+/* ---- 滚动区域 ---- */
+QScrollArea#cardArea {
+    background-color: transparent;
+    border: none;
+}
+
+QScrollArea#cardArea QWidget#cardContainer {
+    background-color: #FFFAFB;
+}
+
+/* ---- 滚动条 ---- */
+QScrollBar:vertical {
+    background: transparent;
+    width: 6px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #FFD4DC;
+    border-radius: 3px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #FFB6C1;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: transparent;
+}
+
+/* ---- 底部状态栏 ---- */
+QWidget#statusBar {
+    background-color: #FFFFFF;
+    border-top: 1px solid #F5E6E8;
+    padding: 6px 16px;
+}
+
+QLabel#statusLabel {
+    color: #9B9B9B;
+    font-size: 11px;
+}
+
+/* ---- 按钮通用 ---- */
+QPushButton {
+    background-color: #FFB6C1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #FF9AAE;
+}
+
+QPushButton:pressed {
+    background-color: #FF8FA3;
+}
+
+/* 文字按钮（无背景） */
+QPushButton#textButton {
+    background-color: transparent;
+    color: #FFB6C1;
+    font-weight: normal;
+}
+
+QPushButton#textButton:hover {
+    color: #FF9AAE;
+}
+
+/* ---- 设置按钮 ---- */
+QPushButton#settingsButton {
+    background-color: transparent;
+    color: #9B9B9B;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+QPushButton#settingsButton:hover {
+    background-color: #FFF0F3;
+    color: #FFB6C1;
+}
+
+/* ---- 卡片 ---- */
+QFrame#clipboardCard {
+    background-color: #FFFFFF;
+    border: 1px solid #F5E6E8;
+    border-radius: 10px;
+    margin: 4px 0px;
+    padding: 0px;
+}
+
+QFrame#clipboardCard:hover {
+    border: 1px solid #FFD4DC;
+    background-color: #FFFCFC;
+}
+
+/* 置顶卡片特殊样式 */
+QFrame#clipboardCard[pinned="true"] {
+    border-left: 3px solid #FF8FA3;
+    background-color: #FFFBFB;
+}
+
+/* ---- 右键菜单 ---- */
+QMenu {
+    background-color: #FFFFFF;
+    border: 1px solid #F5E6E8;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 8px 28px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #FFF0F3;
+    color: #4A4A4A;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #F5E6E8;
+    margin: 4px 12px;
+}
+
+/* ---- 设置对话框 ---- */
+QDialog#settingsDialog {
+    background-color: #FFFAFB;
+}
+
+QRadioButton {
+    spacing: 8px;
+}
+
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    border: 2px solid #FFD4DC;
+    background-color: #FFFFFF;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #FFB6C1;
+    border: 2px solid #FFB6C1;
+}
+
+QRadioButton::indicator:hover {
+    border: 2px solid #FFB6C1;
+}
+
+/* ---- 滚动列表空状态 ---- */
+QLabel#emptyHint {
+    color: #C4A0A8;
+    font-size: 14px;
+    padding: 40px;
+}
+
+/* ---- 开关（QCheckBox 模拟 Toggle） ---- */
+QCheckBox::indicator {
+    width: 42px;
+    height: 22px;
+    border-radius: 11px;
+    border: 2px solid #E0E0E0;
+    background-color: #E0E0E0;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #FFB6C1;
+    border: 2px solid #FFB6C1;
+}
+
+QCheckBox::indicator:hover {
+    border: 2px solid #FFD4DC;
+}
+
+/* ---- Toast 轻提示 ---- */
+QWidget#toast {
+    background-color: #FFB6C1;
+    border-radius: 10px;
+}
