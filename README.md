@@ -107,10 +107,6 @@ python src/main.py
 
 ---
 
-## 📄 许可证
 
-MIT License
-
----
 
 > 💡 有建议或问题？欢迎提 [Issue](https://github.com/CCliang852/clipboard-manager/issues)！
